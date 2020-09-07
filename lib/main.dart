@@ -11,17 +11,35 @@ class Myapp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.blue,
         appBar: AppBar(
-          title: Center(child: Text('I Am Rich')),
+          title: Center(child: Text('Me card')),
           backgroundColor: Colors.blue[900],
         ),
         body: SafeArea(
-          child: Container(
-            height: 100.0,
-            width: 100.0,
-            margin: EdgeInsets.only(left: 30.0),
-            padding: EdgeInsets.all(20.0),
-            color: Colors.white,
-            child: Text('Hello'),
+          child: Column(
+            children: <Widget>[
+              Center(
+                child: CircleAvatar(
+                  radius: 50.0,
+                  backgroundImage: AssetImage('images/alex.jpg'),
+                ),
+              ),
+              Text(
+                'Alex Omaset',
+                 style: TextStyle(
+                   fontSize: 40.0,
+                   color: Colors.white,
+                   fontWeight: FontWeight.bold,
+                ),
+              ),
+              Text(
+                'FLUTTER DEVELOPER',
+                style: TextStyle(
+                  fontSize: 40.0,
+                  color: Colors.white, 
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ],
           ),
         ),
       ),
